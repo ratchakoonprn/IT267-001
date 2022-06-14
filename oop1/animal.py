@@ -35,3 +35,9 @@ if __name__ == "__main__":
     #เรียกดูข้อมูลของ object ผ่านทางชื่อ Class
     Animal.print_detail(ula) #ula.print_detail()
     Animal.print_detail(drac) # drac.print_detail()
+
+    #เรียกดู class varibale ทั้งหมด
+    print(f'{Animal.__dict__}')
+
+    #เรียกดู instance varibale ทั้งหมด
+    print(f'{ula.__dict__}')
