@@ -1,0 +1,37 @@
+Class variable
+    menu_type มีค่า default เป็น ‘Coffee’
+    total มีค่า default เป็น 0
+
+Instance variables
+    customer_name
+    menu
+    num มีค่า default เป็น 1
+    size มีค่า default เป็น ‘R’
+    price
+
+check_menu()
+    สร้าง menu_dictionary สำหรับอ้างอิงราคา กำหนดให้แต่ละรายการมีชื่อย่อ ดังนี้
+    Cafe Mocha (CM): 5.99
+    Cappuccino (CP): 4.99
+    Americano (AM): 4.99
+    Cafe Latte (CL): 4.99
+    Vanilla Latte (VL): 4.75
+    Espresso (ES): 3.00
+
+compute_price()
+    ตรวจสอบว่าขนาดของถ้วยกาแฟ เป็นอะไร โดยที่
+    ‘L’ จะบวกเพิ่ม $1
+    ‘XL’ จะบวกเพิ่ม $1.5
+
+display_detail()
+แสดงรายละเอียดของลูกค้า
+customer_name
+menu
+size
+num
+price
+total
+
+สร้าง object ของลูกค้า 2 คน โดยมีรายการที่สั่งดังนี้
+John สั่ง Espresso 1 แก้ว
+Mary สั่ง Americano ขนาด L จำนวน 2 แก้ว
