@@ -33,9 +33,65 @@ class Car(Vehicle):
         print('-- Car Maintanance --')
         print(f'The lastest maintance in {self.maintanance}')
 
-
 class Truck(Vehicle):
-    pass
+    def __init__(self, brand, speed) -> None:
+        super().__init__(brand, speed)
+        self.__capacity = 1000
+        self.__wheel = 4
+    
+    @property
+    def capacity(self):
+        return self.__capacity
+    @capacity.setter
+    def capacity(self,value):
+        self.__capacity = value
+    
+    @property
+    def wheel(self):
+        return self.__wheel
+    @wheel.setter
+    def wheel(self,value):
+        self.__wheel = value
+    
+    def show_detail(self):
+        super().show_detail()
+        print('==== Truck Detail ====')
+        print(f'{self.brand} with speed {self.speed} km/hr')
+        print(f'carry {self.capacity} tons')
+    
+    def show_price(self):
+        print('++++ Truck Price ++++')
+        if self.wheel == 4:
+            price = 1000
+        elif self.wheel == 6:
+            price = 1500
+        elif self.wheel == 8:
+            price = 2000
+        else:
+            price = 3000
+        print(f'{self.wheel}Truck = {price} baht/day.')
 
 class Motocycle(Vehicle):
-    pass
+    def __init__(self, brand, speed) -> None:
+        super().__init__(brand, speed)
+        self.__cc = 150
+        self.__model = None
+    @property
+    def cc(self):
+        return self.__cc
+    @cc.setter
+    def cc(self,value):
+        self.__cc = value
+    
+    @property
+    def model(self):
+        return self.__model
+    @model.setter
+    def model(self,value):
+        self.__model = value
+    
+    def show_detail(self):
+        super().show_detail()
+        print('==== Motocycle Detail ====')
+        print(f'{self.brand} with speed {self.speed} km/hr')
+        print(f'cc {self.cc}')
